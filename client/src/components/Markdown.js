@@ -1,56 +1,41 @@
-import React, { useState, useEffect } from "react";
-import ReactMarkdown from "react-markdown";
-import YAML from "js-yaml";
+import React from 'react';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 
-const Markdown = (projectMarkdowns) => {
-  const isAscendingOrder = false;
-  const { projects } = projectMarkdowns;
-  const [projectsArray, setProjectsArray] = useState([]);
+
+function Markdown() {
+
+  const [projects, setProjects] = useState([]);
   useEffect(() => {
-    const fetchProjectsData = async () => {
+    const projectIds = ["verloren", "cosmania", "insightUBC", "javaApp"];
+
+    const projectRequests = projectIds.map(projectId =>
+      axios.get(`http://localhost:3001/projects/${projectId}`)
+    );
+    const fetchProjects = async () => {
       try {
-        const promises = projects.map(async (filePath) => {
-          const response = await fetch(filePath);
-          const data = await response.text();
-
-          // Separate YAML front matter and content
-          const [frontMatter, content] = data.split("---").slice(1);
-
-          // Parse YAML front matter using js-yaml
-          const metadata = YAML.safeLoad(frontMatter.trim()) || {};
-
-          return { filePath, metadata, content };
-        });
-        setProjectsArray(await Promise.all(promises));
-      } catch (error) {
-        console.error("Error fetching Markdown data:", error);
+        const projectPromises = await Promise.all(projectRequests);
+        const projectsData = projectPromises.map(project => project.data);
+        setProjects(projectsData);
       }
-    };
-    fetchProjectsData();
-  }, [projects]);
-
-  const sortedProjects = [...projectsArray].sort((a, b,) => {
-    if (!projectsArray.length) {
-      return alert("No project data to display");
+      catch (error) {
+        console.error('Error fetching projects:', error);
+      }
     }
-    const dateA = new Date(a.metadata.start_date);
-    const dateB = new Date(b.metadata.start_date);
-    return isAscendingOrder ? dateA - dateB : dateB - dateA;
-  });
+    fetchProjects();
+  }, []);
+
 
   return (
     <div>
-      {sortedProjects.map((project, index) => (
+      {projects.map((project, index) => (
         <div key={index}>
-          {/* <h1>{markdownData.yamlData.title}</h1>
-          <p>{markdownData.yamlData.excerpt}</p> */}
-          <ReactMarkdown>{project.metadata.start_date}</ReactMarkdown>
-          <ReactMarkdown>{project.content.Overview}</ReactMarkdown>
+          {/* <h2>{project.frontMatter.title}</h2> */}
           <ReactMarkdown>{project.content}</ReactMarkdown>
         </div>
       ))}
     </div>
-  );
-};
-
+  )
+}
 export default Markdown;
