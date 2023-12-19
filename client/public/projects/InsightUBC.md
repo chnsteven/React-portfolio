@@ -10,7 +10,11 @@ video_excerpt: "This video was made by my partner"
 
 # InsightUBC
 
+## Overview
+
 Completed a 10-minute adventure game with a team of 6 using ECS in C++.
+
+## Features
 
 - Developed a query language using EBNF for a snapshot of the UBC Pair database.
 - Wrote user stories and built a REST-API server that communicated with a self-implemented backend.

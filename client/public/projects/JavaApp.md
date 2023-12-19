@@ -10,6 +10,8 @@ video_excerpt: "No video demo available"
 
 # Java App
 
+## Features
+
 - Utilized AWT and SWING to create a custom visual novel application with Java.
 - Wrote JUnit tests to validate integration within classes.
 - Implemented custom exception classes and managed exceptions with try-catch blocks.
