@@ -1,16 +1,12 @@
 import React from "react";
-import Markdown from "../components/Markdown";
+import DisplayProjects from "../components/DisplayProjects";
 
-// const verloren = "/projects/Verloren.md";
-// const cosmania = "/projects/Cosmania.md";
-// const insightUBC = "/projects/InsightUBC.md";
-// const javaApp = "/projects/JavaApp.md";
-
+const projectIds = ["verloren", "cosmania", "insightUBC", "javaApp"];
 function Projects() {
   return (
     <div>
       Projects
-      <Markdown />
+      <DisplayProjects projectIds={projectIds} />
     </div>
   );
 }

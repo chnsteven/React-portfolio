@@ -3,12 +3,10 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 
-
-function Markdown() {
-
+function DisplayProjects({ projectIds }) {
+  const isAscendingOrder = false;
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    const projectIds = ["verloren", "cosmania", "insightUBC", "javaApp"];
 
     const projectRequests = projectIds.map(projectId =>
       axios.get(`http://localhost:3001/projects/${projectId}`)
@@ -27,9 +25,18 @@ function Markdown() {
   }, []);
 
 
+  const sortedProjects = [...projects].sort((a, b,) => {
+    if (!projects.length) {
+      return alert("No project data to display");
+    }
+    const dateA = new Date(a.frontMatter.start_date);
+    const dateB = new Date(b.frontMatter.start_date);
+    return isAscendingOrder ? dateA - dateB : dateB - dateA;
+  });
+
   return (
     <div>
-      {projects.map((project, index) => (
+      {sortedProjects.map((project, index) => (
         <div key={index}>
           {/* <h2>{project.frontMatter.title}</h2> */}
           <ReactMarkdown>{project.content}</ReactMarkdown>
@@ -38,4 +45,4 @@ function Markdown() {
     </div>
   )
 }
-export default Markdown;
+export default DisplayProjects;
