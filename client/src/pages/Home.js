@@ -1,7 +1,7 @@
 import React from "react";
-
+import NavigationGrid from "../components/NavigationGrid";
 function Home() {
-  return <div>Home</div>;
+  return <NavigationGrid />;
 }
 
 export default Home;

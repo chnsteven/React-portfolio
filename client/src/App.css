@@ -67,3 +67,7 @@
 .scroll-to-top-button.visible {
   display: block;
 }
+
+Link {
+  text-decoration: none;
+}
