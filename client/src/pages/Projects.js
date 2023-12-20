@@ -2,8 +2,9 @@ import React from "react";
 import DisplayProjects from "../components/DisplayProjects";
 import NavigationMenu from "../components/NavigationMenu";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import {projectIds} from "../utils/constants";
 
-const projectIds = ["Verloren", "Cosmania", "InsightUBC", "Java Application"];
+
 function Projects() {
   return (
     <div>

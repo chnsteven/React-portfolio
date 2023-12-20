@@ -23,3 +23,5 @@ export   const navigationLinks = [
     path: "/Education",
     component: Education}
   ];
+
+  export const projectIds = ["Verloren", "Cosmania", "InsightUBC", "Java Application"];
