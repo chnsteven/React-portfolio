@@ -10,7 +10,8 @@ function NavigationMenu({buttonNames}) {
       };
 
       const renderNavigationMenu = () => (
-        <div>
+        <div className='navigationMenu'>
+          Navigation menu
           <ul>
             {buttonNames.map(buttonName => (
                 <li key={buttonName}>
