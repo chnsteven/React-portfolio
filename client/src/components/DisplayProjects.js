@@ -43,7 +43,7 @@ function DisplayProjects({ projectIds }) {
       if(!isCurrentYear) {
         currentYear = projectYear;
         return (
-          <div key={`year-${currentYear}`}>
+          <div key={`year-${currentYear}`} id={`year-${currentYear}`}>
             <h2>{currentYear}</h2>
             {renderProject(project)}
           </div>
@@ -54,7 +54,7 @@ function DisplayProjects({ projectIds }) {
   };
 
   const renderProject = project => (
-    <div key={project.frontMatter.start_date}>
+    <div key={project.frontMatter.start_date} id={project.frontMatter.title}>
       <h1>{project.frontMatter.title}</h1>
       <p>{project.frontMatter.excerpt}</p>
 

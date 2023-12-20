@@ -1,25 +1,32 @@
-import React from 'react'
+import React from 'react';
 
-function NavigationMenu() {
-
-    const scrollToYear = year => {
-        const element = document.getElementById(`year-${year}`);
+function NavigationMenu({buttonNames}) {
+    const scrollToProject = name => {
+        const element = document.getElementById(name);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          element.scrollIntoView({ behavior: 'smooth',
+        block: 'start' });
         }
       };
+
+      const renderNavigationMenu = () => (
+        <div>
+          <ul>
+            {buttonNames.map(buttonName => (
+                <li key={buttonName}>
+                  <button onClick={() => scrollToProject(buttonName)}>
+                    {buttonName}
+                  </button>
+                </li>
+            ))}
+          </ul>
+        </div>
+      )
   return (
     <div>
-    <h2>Navigation</h2>
-    <ul>
-        <li key={`nav-${project.frontMatter.start_date}`}>
-          <button onClick={() => scrollToYear(2023)}>
-            2023
-          </button>
-        </li>
-    </ul>
+        {renderNavigationMenu()}
   </div>
   )
 }
 
-export default NavigationMenu
+export default NavigationMenu;
