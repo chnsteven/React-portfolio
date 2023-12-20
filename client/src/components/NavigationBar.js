@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Projects from "../pages/Projects";
+import Education from "../pages/Education";
 import { Link, Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 function NavigationBar() {
@@ -12,11 +13,13 @@ function NavigationBar() {
       <Link to="/About">About</Link>
       <Link to="/Contact">Contact</Link>
       <Link to="/Projects">Projects</Link>
+      <Link to="/Education">Education</Link>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Projects" element={<Projects />} />
+        <Route path="/Education" element={<Education />} />
       </Routes>
     </Router>
   );

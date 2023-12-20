@@ -49,3 +49,21 @@
   z-index: 1000;
   background: rgba(255, 255, 255, 0.5);
 }
+
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.scroll-to-top-button.visible {
+  display: block;
+}

@@ -24,6 +24,10 @@ function About() {
             Understand Intelligent system, computer graphics, and computer
             animations.
           </li>
+          {/* TODO: add skills */}
+          <li>
+            TODO: add skills
+          </li>
         </ul>
       </div>
     </div>
