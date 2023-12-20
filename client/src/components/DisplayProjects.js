@@ -34,15 +34,44 @@ function DisplayProjects({ projectIds }) {
     return isAscendingOrder ? dateA - dateB : dateB - dateA;
   });
 
-  return (
-    <div>
-      {sortedProjects.map((project, index) => (
-        <div key={index}>
-          {/* <h2>{project.frontMatter.title}</h2> */}
-          <ReactMarkdown>{project.content}</ReactMarkdown>
-        </div>
-      ))}
+  const renderProjects = () => {
+    let currentYear = null;
+    return sortedProjects.map((project, index) => {
+      const projectYear = project.frontMatter.start_date.substring(0, 4);
+      const isCurrentYear = currentYear === projectYear;
+
+      if(!isCurrentYear) {
+        currentYear = projectYear;
+        return (
+          <div key={`year-${currentYear}`}>
+            <h2>{currentYear}</h2>
+            {renderProject(project)}
+          </div>
+        );
+      }
+      return renderProject(project);
+    });
+  };
+
+  const renderProject = project => (
+    <div key={project.frontMatter.start_date}>
+      <h1>{project.frontMatter.title}</h1>
+      <p>{project.frontMatter.excerpt}</p>
+
+      {/* Render front matter properties */}
+      <img src={project.frontMatter.cover_image} alt="Cover Image" />
+      {project.frontMatter.video && (
+        <iframe title="Video" src={project.frontMatter.video} />
+      )}
+
+      {/* Render sections using react-markdown */}
+      <ReactMarkdown>{project.content}</ReactMarkdown>
     </div>
-  )
+  );
+
+
+  return <div>
+    {renderProjects()}
+  </div>
 }
 export default DisplayProjects;

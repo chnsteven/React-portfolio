@@ -5,7 +5,7 @@ import Contact from "../pages/Contact";
 import Projects from "../pages/Projects";
 import { Link, Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
-function MainNavBar() {
+function NavigationBar() {
   return (
     <Router>
       <Link to="/">Home</Link>
@@ -22,4 +22,4 @@ function MainNavBar() {
   );
 }
 
-export default MainNavBar;
+export default NavigationBar;
