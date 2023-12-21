@@ -7,8 +7,9 @@ import {navigationLinks} from "./utils/constants";
 function App() {
   return (
     <div className="App">
-      <MainBanner />
       <NavigationBar navigationLinks={navigationLinks}/>
+      <MainBanner />
+      
     </div>
   );
 }

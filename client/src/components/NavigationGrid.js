@@ -13,7 +13,7 @@ function NavigationGrid() {
               <Link key={index} to={link.path}>
                 <button 
                 type='button' 
-                className='btn btn-primary btn-home'
+                className='btn btn-primary btn-home hover-box-shadow'
                 id=''>{link.title}</button>
               </Link>
             </div>

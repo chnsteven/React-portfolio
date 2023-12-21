@@ -22,7 +22,7 @@ function DisplayProjects({ projectIds }) {
       }
     }
     fetchProjects();
-  }, []);
+  }, [projectIds]);
 
 
   const sortedProjects = [...projects].sort((a, b,) => {
@@ -59,10 +59,10 @@ function DisplayProjects({ projectIds }) {
       <p>{project.frontMatter.excerpt}</p>
 
       {/* Render front matter properties */}
-      <img src={project.frontMatter.cover_image} alt="Cover Image" />
+      {/* <img src={project.frontMatter.cover_image} alt="" />
       {project.frontMatter.video && (
-        <iframe title="Video" src={project.frontMatter.video} />
-      )}
+        <iframe title="" src={project.frontMatter.video} />
+      )} */}
 
       {/* Render sections using react-markdown */}
       <ReactMarkdown>{project.content}</ReactMarkdown>
