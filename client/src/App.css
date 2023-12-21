@@ -11,8 +11,15 @@ body {
 }
 
 .fit-picture {
-  width: 100px;
-  height: 100px;
+  max-width: 100%;
+  width: 10%;
+  max-height: 100vh;
+  height: auto;
+}
+
+#banner-text{
+  max-width: 100%;
+  text-align: center;
 }
 
 .navigationMenu {

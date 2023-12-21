@@ -1,15 +1,16 @@
 import "./App.css";
 import MainBanner from "./components/MainBanner";
-import NavigationBar from "./components/NavigationBar";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import {navigationLinks} from "./utils/constants";
 
 
 function App() {
   return (
     <div className="App">
-      <NavigationBar navigationLinks={navigationLinks}/>
+      <Header navigationLinks={navigationLinks}/>
       <MainBanner />
-      
+      <Footer navigationLinks={navigationLinks}/>
     </div>
   );
 }

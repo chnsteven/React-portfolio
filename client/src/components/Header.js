@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
-function NavigationBar({navigationLinks}) {
+function Header({navigationLinks}) {
   return (
     
     <Router>
@@ -23,4 +23,4 @@ function NavigationBar({navigationLinks}) {
   );
 }
 
-export default NavigationBar;
+export default Header;

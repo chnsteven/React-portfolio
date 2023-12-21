@@ -3,8 +3,8 @@ import "../App.css";
 import Banner from "../assets/Banner.jpg";
 function MainBanner() {
   return (
-    <div>
-      <h1>Steven Chen</h1>
+    <div id="banner">
+      <h3 id="banner-text">Steven Chen</h3>
       <img className="fit-picture" src={Banner} alt="Banner of Steven Chen" />
     </div>
   );
