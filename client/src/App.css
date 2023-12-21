@@ -73,3 +73,35 @@
 Link {
   text-decoration: none;
 }
+
+.btn-home {
+  /* button settings */
+  width: 200px;
+  height: 120px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 70%;
+  background-color:dodgerblue;
+  /* font settings */
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  transition: box-shadow 0.1s ease;
+  &:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  /* Responsive styles using media queries */
+  @media (max-width: 767px) {
+    width: 175px;
+    height: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: lighter;
+}
