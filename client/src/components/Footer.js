@@ -1,8 +1,10 @@
 import React from "react";
-
+import Contact from "./Contact";
 function Footer({navigationLinks}) {
   return (
-    <div></div>
+    <footer>
+      <Contact/>
+    </footer>
   );
 }
 

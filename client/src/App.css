@@ -11,8 +11,8 @@ body {
 }
 
 .fit-picture {
-  max-width: 100%;
-  width: 10%;
+  /* max-width: 10%; */
+  width: 60px;
   max-height: 100vh;
   height: auto;
 }
@@ -97,9 +97,43 @@ Link {
 }
 
 .hover-box-shadow:hover{
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 .hover-text-shadow:hover{
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: #fc0 1px 0 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+footer img {
+  border-radius: 50%;
+}
+
+.contact-columns {
+  display: flex;
+  align-items: center;
+}
+
+.contact-column {
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.footer-link {
+  color:azure;
+  text-decoration: none;
 }

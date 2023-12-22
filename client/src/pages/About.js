@@ -1,8 +1,9 @@
 import React from "react";
-
+import ScrollToTopButton from "../components/ScrollToTopButton";
 function About() {
   return (
     <div className="container">
+      <ScrollToTopButton />
       <h1>About</h1>
       <div>
         <ul>

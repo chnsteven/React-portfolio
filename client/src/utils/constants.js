@@ -1,6 +1,5 @@
 import Home from '../pages/Home';
 import About from '../pages/About';
-import Contact from '../pages/Contact';
 import Projects from '../pages/Projects';
 import Education from '../pages/Education';
 
@@ -13,9 +12,6 @@ export   const navigationLinks = [
     {title: "About",
     path: "/about",
     component: About},
-    {title: "Contact",
-    path: "/contact",
-    component: Contact},
     {title: "Projects",
     path: "/projects",
     component: Projects},
