@@ -6,10 +6,14 @@
 
 body {
   font-family: monospace;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: lighter;
 }
-
+.container{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
 .fit-picture {
   /* max-width: 10%; */
   width: 60px;
@@ -66,7 +70,7 @@ Link {
     height: 80px;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -85,7 +89,7 @@ Link {
   margin-left:2%;
   color: white;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 #navigation-bar a {
@@ -140,14 +144,12 @@ footer img {
 }
 
 .title{
-  margin-left: 10px;
-  margin-top: 10px;
   text-shadow: #fc0 2px 3px;
-  display: inline-block;
-  border: solid;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
   padding: 5px;
+  text-orientation:upright;
+  writing-mode: vertical-lr;
 }
 
 ul{
@@ -162,5 +164,5 @@ li {
 
 strong{
   font-weight: 900;
-  color: darkred;
+  color: #8b0000;
 }
