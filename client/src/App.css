@@ -17,11 +17,6 @@ body {
   height: auto;
 }
 
-#banner-text{
-  max-width: 100%;
-  text-align: center;
-}
-
 .navigationMenu {
   position: fixed;
   top: 10%;
@@ -142,4 +137,30 @@ footer img {
 
 .bold-text{
   font-weight: bold;
+}
+
+.title{
+  margin-left: 10px;
+  margin-top: 10px;
+  text-shadow: #fc0 2px 3px;
+  display: inline-block;
+  border: solid;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px;
+}
+
+ul{
+  text-align: left;
+  margin-top: 20px;
+}
+
+li {
+  list-style-type: circle;
+  padding: 10px;
+}
+
+strong{
+  font-weight: 900;
+  color: darkred;
 }
