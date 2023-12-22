@@ -3,7 +3,6 @@ import { Link, Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 function Header({navigationLinks}) {
   return (
-    
     <Router>
       <div className="container-fluid" id="navigation-bar">
       {navigationLinks.map((link, index) => (
