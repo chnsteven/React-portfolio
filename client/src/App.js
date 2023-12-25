@@ -1,5 +1,5 @@
 import "./App.css";
-import "./css/projectDashboard.css";
+import "./utils/css/projectDashboard.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { headerLinks } from "./utils/constants";

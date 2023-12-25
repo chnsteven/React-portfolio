@@ -1,27 +1,7 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { projectIds } from "../utils/constants";
-import axios from "axios";
 import readMoreIcon from "../assets/icons/read-more.svg";
 import youtubeIcon from "../assets/icons/youtube.svg";
-function Projects() {
-  const [projects, setProjects] = useState([]);
-  useEffect(() => {
-    const projectRequests = projectIds.map((projectId) =>
-      axios.get(`http://localhost:3001/projects/${projectId}`)
-    );
-    const fetchProjects = async () => {
-      try {
-        const projectPromises = await Promise.all(projectRequests);
-        const projectsData = projectPromises.map((project) => project.data);
-        setProjects(projectsData);
-      } catch (error) {
-        console.error("Error fetching projects:", error);
-      }
-    };
-    fetchProjects();
-  }, [projectIds]);
-
+function Projects({ projects }) {
   return (
     <div>
       <div className="project-dashboard-box-container">
@@ -40,8 +20,10 @@ function Projects() {
               ></a>
             </div>
             <div className="project-card-content">
+              {/* <p></p> */}
               <p>
-                {project.frontMatter.start_date}~{project.frontMatter.end_date}
+                {project.frontMatter.title} {project.frontMatter.start_date}~
+                {project.frontMatter.end_date}
               </p>
             </div>
             <nav className="project-dashboard-action-container">

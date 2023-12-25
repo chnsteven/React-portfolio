@@ -160,7 +160,7 @@ footer {
   writing-mode: vertical-lr;
 }
 
-ul{
+.about-page-list ul{
   text-align: left;
   margin-top: 20px;
 }
