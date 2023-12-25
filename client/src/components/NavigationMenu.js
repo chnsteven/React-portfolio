@@ -1,33 +1,28 @@
-import React from 'react';
+import React from "react";
 
-function NavigationMenu({buttonNames}) {
-    const scrollToProject = name => {
-        const element = document.getElementById(name);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth',
-        block: 'start' });
-        }
-      };
+function NavigationMenu({ buttonNames }) {
+  const scrollToProject = (name) => {
+    const element = document.getElementById(name);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
-      const renderNavigationMenu = () => (
-        <div className='navigationMenu'>
-          Navigation menu
-          <ul>
-            {buttonNames.map(buttonName => (
-                <li key={buttonName}>
-                  <button onClick={() => scrollToProject(buttonName)}>
-                    {buttonName}
-                  </button>
-                </li>
-            ))}
-          </ul>
-        </div>
-      )
-  return (
-    <div>
-        {renderNavigationMenu()}
-  </div>
-  )
+  const renderNavigationMenu = () => (
+    <div className="navigationMenu">
+      Navigation menu
+      <ul>
+        {buttonNames.map((buttonName) => (
+          <li key={buttonName}>
+            <button onClick={() => scrollToProject(buttonName)}>
+              {buttonName}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+  return <div>{renderNavigationMenu()}</div>;
 }
 
 export default NavigationMenu;

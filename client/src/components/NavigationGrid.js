@@ -1,27 +1,30 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import {navigationLinks} from "../utils/constants";
+import React from "react";
+import { Link } from "react-router-dom";
+import { navigationLinks } from "../utils/constants";
 
 function NavigationGrid() {
   const buttonsPerRow = 3;
   return (
-    <div className='container-fluid'>
+    <div className="container-fluid">
       {chunk(navigationLinks, buttonsPerRow).map((buttonGroup, index) => (
-        <div className='row' key = {index}>
+        <div className="row" key={index}>
           {buttonGroup.map((link, index) => (
-            <div className='col-md-4' key={index}>
+            <div className="col-md-4" key={index}>
               <Link key={index} to={link.path}>
-                <button 
-                type='button' 
-                className='btn btn-primary btn-home hover-box-shadow'
-                id=''>{link.title}</button>
+                <button
+                  type="button"
+                  className="btn btn-primary btn-home hover-box-shadow"
+                  id=""
+                >
+                  {link.title}
+                </button>
               </Link>
             </div>
           ))}
         </div>
       ))}
     </div>
-  )
+  );
 }
 
 export default NavigationGrid;

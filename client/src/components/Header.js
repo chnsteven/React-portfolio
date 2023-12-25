@@ -1,16 +1,18 @@
 import React from "react";
 import { Link, Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
-function Header({navigationLinks}) {
+function Header({ navigationLinks }) {
   return (
     <Router>
       <div className="container-fluid" id="navigation-bar">
-      {navigationLinks.map((link, index) => (
-        <Link to={link.path}
-        className="navigation-bar-link hover-text-shadow">
-          {link.title}
+        {navigationLinks.map((link, index) => (
+          <Link
+            to={link.path}
+            className="navigation-bar-link hover-text-shadow"
+          >
+            {link.title}
           </Link>
-      ))}
+        ))}
       </div>
       <Routes>
         {navigationLinks.map((link, index) => (
@@ -18,7 +20,6 @@ function Header({navigationLinks}) {
         ))}
       </Routes>
     </Router>
-
   );
 }
 

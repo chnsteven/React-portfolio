@@ -1,31 +1,28 @@
-import React from 'react';
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
+import React from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
 
 function DisplayProjects({ projectIds }) {
   const isAscendingOrder = false;
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-
-    const projectRequests = projectIds.map(projectId =>
+    const projectRequests = projectIds.map((projectId) =>
       axios.get(`http://localhost:3001/projects/${projectId}`)
     );
     const fetchProjects = async () => {
       try {
         const projectPromises = await Promise.all(projectRequests);
-        const projectsData = projectPromises.map(project => project.data);
+        const projectsData = projectPromises.map((project) => project.data);
         setProjects(projectsData);
+      } catch (error) {
+        console.error("Error fetching projects:", error);
       }
-      catch (error) {
-        console.error('Error fetching projects:', error);
-      }
-    }
+    };
     fetchProjects();
   }, [projectIds]);
 
-
-  const sortedProjects = [...projects].sort((a, b,) => {
+  const sortedProjects = [...projects].sort((a, b) => {
     if (!projects.length) {
       return alert("No project data to display");
     }
@@ -40,7 +37,7 @@ function DisplayProjects({ projectIds }) {
       const projectYear = project.frontMatter.start_date.substring(0, 4);
       const isCurrentYear = currentYear === projectYear;
 
-      if(!isCurrentYear) {
+      if (!isCurrentYear) {
         currentYear = projectYear;
         return (
           <div key={`year-${currentYear}`} id={`year-${currentYear}`}>
@@ -53,7 +50,7 @@ function DisplayProjects({ projectIds }) {
     });
   };
 
-  const renderProject = project => (
+  const renderProject = (project) => (
     <div key={project.frontMatter.start_date} id={project.frontMatter.title}>
       <h1>{project.frontMatter.title}</h1>
       <p>{project.frontMatter.excerpt}</p>
@@ -69,9 +66,6 @@ function DisplayProjects({ projectIds }) {
     </div>
   );
 
-
-  return <div>
-    {renderProjects()}
-  </div>
+  return <div>{renderProjects()}</div>;
 }
 export default DisplayProjects;
