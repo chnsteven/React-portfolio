@@ -3,7 +3,7 @@ import About from "../pages/About";
 import Projects from "../pages/Projects";
 import Education from "../pages/Education";
 
-export const navigationLinks = [
+export const headerLinks = [
   { title: "Home", path: "/", component: Home },
   { title: "About", path: "/about", component: About },
   { title: "Projects", path: "/projects", component: Projects },

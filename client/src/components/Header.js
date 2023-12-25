@@ -1,22 +1,29 @@
 import React from "react";
 import { Link, Routes, Route, BrowserRouter as Router } from "react-router-dom";
-
-function Header({ navigationLinks }) {
+import { projectIds } from "../utils/constants";
+function Header({ headerLinks }) {
   return (
     <Router>
       <div className="container-fluid" id="navigation-bar">
-        {navigationLinks.map((link, index) => (
+        {headerLinks.map((headerLink, index) => (
           <Link
-            to={link.path}
+            to={headerLink.path}
             className="navigation-bar-link hover-text-shadow"
           >
-            {link.title}
+            {headerLink.title}
           </Link>
         ))}
       </div>
       <Routes>
-        {navigationLinks.map((link, index) => (
+        {headerLinks.map((link, index) => (
           <Route key={index} path={link.path} element={<link.component />} />
+        ))}
+        {projectIds.map((projectId, index) => (
+          <Route
+            key={index}
+            path={`/projects/${projectId}`}
+            element={<div>{projectId}</div>}
+          />
         ))}
       </Routes>
     </Router>

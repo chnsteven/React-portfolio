@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { navigationLinks } from "../utils/constants";
+import { headerLinks } from "../utils/constants";
 
 function NavigationGrid() {
   const buttonsPerRow = 3;
   return (
     <div className="container-fluid">
-      {chunk(navigationLinks, buttonsPerRow).map((buttonGroup, index) => (
+      {chunk(headerLinks, buttonsPerRow).map((buttonGroup, index) => (
         <div className="row" key={index}>
           {buttonGroup.map((link, index) => (
             <div className="col-md-4" key={index}>

@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "../assets/banner.jpg";
 
-function Footer({ navigationLinks }) {
+function Footer() {
   return (
     <footer>
       <div className="contact-columns">
