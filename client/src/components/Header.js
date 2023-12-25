@@ -4,7 +4,7 @@ import { projectIds } from "../utils/constants";
 function Header({ headerLinks }) {
   return (
     <Router>
-      <div className="container-fluid" id="navigation-bar">
+      <nav className="container-fluid" id="navigation-bar">
         {headerLinks.map((headerLink, index) => (
           <Link
             to={headerLink.path}
@@ -13,7 +13,7 @@ function Header({ headerLinks }) {
             {headerLink.title}
           </Link>
         ))}
-      </div>
+      </nav>
       <Routes>
         {headerLinks.map((link, index) => (
           <Route key={index} path={link.path} element={<link.component />} />

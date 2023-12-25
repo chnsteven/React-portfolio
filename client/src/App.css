@@ -19,6 +19,7 @@ body {
   width: 60px;
   max-height: 100vh;
   height: auto;
+  border-radius: 50%;
 }
 
 .navigationMenu {
@@ -119,10 +120,6 @@ footer {
   text-align: center;
 }
 
-footer img {
-  border-radius: 50%;
-}
-
 .contact-columns {
   display: flex;
   align-items: center;
@@ -137,6 +134,13 @@ footer img {
 .footer-link {
   color:azure;
   text-decoration: none;
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 3px;
+  margin-right: 5px;
 }
 
 .bold-text{
@@ -165,4 +169,11 @@ li {
 strong{
   font-weight: 900;
   color: #8b0000;
+}
+
+.license-link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 15px;
 }
