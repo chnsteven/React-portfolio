@@ -4,31 +4,34 @@ import emailIcon from "../assets/icons/email.svg";
 import githubIcon from "../assets/icons/github.svg";
 import linkedinIcon from "../assets/icons/linkedin.svg";
 import mobilePhoneIcon from "../assets/icons/mobile.svg";
+import linkIcon from "../assets/icons/link.svg";
 function Footer() {
   return (
     <footer>
       <div className="contact-columns">
         <div className="contact-column">
           <p>
+            <img
+              className="footer-icon"
+              src={linkedinIcon}
+              alt="linkedin icon"
+            />
+            Linkedin
             <a
               href="https://www.linkedin.com/in/steven-chen-a62226276/"
               className="footer-link hover-text-shadow"
             >
-              <img
-                className="footer-icon"
-                src={linkedinIcon}
-                alt="linkedin icon"
-              />
-              Linkedin
+              <img className="footer-icon" src={linkIcon} alt="link icon" />
             </a>
           </p>
           <p>
+            <img className="footer-icon" src={githubIcon} alt="github icon" />
+            Github
             <a
               href="https://github.com/chnsteven"
               className="footer-link hover-text-shadow"
             >
-              <img className="footer-icon" src={githubIcon} alt="github icon" />
-              Github
+              <img className="footer-icon" src={linkIcon} alt="link icon" />
             </a>
           </p>
         </div>
