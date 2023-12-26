@@ -7,9 +7,11 @@ app.use(express.json());
 
 // Routers
 const projectRouter = require("./routes/Projects");
+const educationRouter = require("./routes/Education");
 app.use(cors());
 app.use("/projects", projectRouter);
+app.use("/education", educationRouter);
 
 app.listen(3001, () => {
-    console.log("Server running on port 3001");
+  console.log("Server running on port 3001");
 });

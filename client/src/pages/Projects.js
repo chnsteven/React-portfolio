@@ -19,13 +19,16 @@ function Projects({ projects }) {
                 href={`/projects/${project.frontMatter.title}`}
               ></a>
             </div>
-            <div className="project-card-content">
+            <nav className="project-card-content">
               {/* <p></p> */}
-              <p>
+              <a
+                className="no-decoration hover-text-shadow"
+                href={`/projects/${project.frontMatter.title}`}
+              >
                 {project.frontMatter.title} {project.frontMatter.start_date}~
                 {project.frontMatter.end_date}
-              </p>
-            </div>
+              </a>
+            </nav>
             <nav className="project-dashboard-action-container">
               <a
                 className="project-action"

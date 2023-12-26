@@ -14,7 +14,7 @@
 
 .project-card-header {
     position: relative;
-    cursor: pointer;
+    /* cursor: pointer; */
     box-sizing: border-box
 }
 
