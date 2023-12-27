@@ -9,11 +9,13 @@ body {
   font-size: 15px;
   font-weight: lighter;
 }
-.container{
+
+.container {
   margin-top: 50px;
   display: flex;
   justify-content: center;
 }
+
 .fit-picture {
   /* max-width: 10%; */
   width: 60px;
@@ -59,12 +61,13 @@ Link {
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 70%;
-  background-color:dodgerblue;
+  background-color: dodgerblue;
   /* font settings */
   font-size: 20px;
   font-weight: bold;
   color: white;
   transition: box-shadow 0.1s ease;
+
   /* Responsive styles using media queries */
   @media (max-width: 767px) {
     width: 175px;
@@ -76,7 +79,7 @@ Link {
 }
 
 #navigation-bar {
-  background-color:dodgerblue;
+  background-color: dodgerblue;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -87,7 +90,7 @@ Link {
 }
 
 .navigation-bar-link {
-  margin-left:2%;
+  margin-left: 2%;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -98,11 +101,11 @@ Link {
   padding: 10px;
 }
 
-.hover-box-shadow:hover{
+.hover-box-shadow:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-.hover-text-shadow:hover{
+.hover-text-shadow:hover {
   text-shadow: #fc0 1px 0 10px;
 }
 
@@ -118,8 +121,9 @@ footer {
   color: white;
   padding: 10px;
   text-align: center;
+
   @media (max-width: 767px) {
-    font-size:12px;
+    font-size: 12px;
   }
 }
 
@@ -135,7 +139,7 @@ footer {
 }
 
 .footer-link {
-  color:azure;
+  color: azure;
   text-decoration: none;
 }
 
@@ -147,20 +151,20 @@ footer {
   margin: 0 5px 3px 5px;
 }
 
-.bold-text{
+.bold-text {
   font-weight: bold;
 }
 
-.title{
+.title {
   text-shadow: #fc0 2px 3px;
   text-align: left;
-  text-transform: uppercase;
-  padding: 5px;
-  text-orientation:upright;
-  writing-mode: vertical-lr;
+  text-transform: capitalize;
+  padding: 10px;
+  /* text-orientation:upright; */
+  /* writing-mode: vertical-lr; */
 }
 
-.about-page-list ul{
+.about-page-list ul {
   text-align: left;
   margin-top: 20px;
 }
@@ -170,7 +174,7 @@ li {
   padding: 10px;
 }
 
-strong{
+strong {
   font-weight: 900;
   color: #8b0000;
 }

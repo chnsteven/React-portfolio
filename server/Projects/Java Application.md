@@ -6,12 +6,15 @@ excerpt: "Application developed for CPSC 210 at University of British Columbia"
 cover_image: "../images/cover-javaApplication.png"
 video: ""
 video_excerpt: "No video demo available"
+overview: ""
+features: [
+"Utilized AWT and SWING to create a custom visual novel application with Java.
+",
+"Wrote JUnit tests to validate integration within classes.
+",
+"Implemented custom exception classes and managed exceptions with try-catch blocks.
+",
+]
 ---
 
-# Java App
 
-## Features
-
-- \*\*Utilized AWT and SWING to create a custom visual novel application with Java.
-- \*\*Wrote JUnit tests to validate integration within classes.
-- \*\*Implemented custom exception classes and managed exceptions with try-catch blocks.

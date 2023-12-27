@@ -4,7 +4,9 @@ function ProjectPage({ project }) {
   return (
     <div>
       {/* <Markdown>{project.frontMatter.title}</Markdown> */}
-      <Markdown>{project.content}</Markdown>
+      <h1 className="title">
+        <Markdown>{project.frontMatter.title}</Markdown>
+      </h1>
     </div>
   );
 }
