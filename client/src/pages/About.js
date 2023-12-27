@@ -31,7 +31,7 @@ function About() {
       <ScrollToTopButton />
       <div className="container">
         <h1 className="title">About</h1>
-        <ul className="about-page-list">
+        <ul className="left-align">
           {aboutContent.map((content, index) => (
             <li key={index}>
               <p
@@ -43,9 +43,8 @@ function About() {
             </li>
           ))}
         </ul>
-        {/* TODO: add skills */}
         <h1 className="title">Skills</h1>
-        <ul className="about-page-list">
+        <ul className="left-align">
           {skills.map((skill, index) => (
             <li key={index}>{skill}</li>
           ))}
