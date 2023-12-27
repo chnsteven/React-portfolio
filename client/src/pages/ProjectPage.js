@@ -1,5 +1,6 @@
 import Markdown from "react-markdown";
 import React, { useEffect, useState } from "react";
+import arrowLeftIcon from "../assets/icons/arrow-left.svg";
 const convertMarkdownToHTML = (text) => {
   text = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"); // Bold
   text = text.replace(/\*(.*?)\*/g, "<em>$1</em>"); // Italic
@@ -27,6 +28,13 @@ function ProjectPage({ project }) {
 
   return (
     <div>
+      <button className="return-to-projects-button"
+        onClick={() => window.location.href = "/projects"} >
+        <img
+          className="icon"
+          src={arrowLeftIcon}
+          alt="arrow left icon" />
+        Return to project page </button>
       <div>
         <h1 className="title">
           <Markdown>{project.frontMatter.title}</Markdown>

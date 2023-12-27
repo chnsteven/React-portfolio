@@ -1,6 +1,7 @@
 import React from "react";
 import readMoreIcon from "../assets/icons/read-more.svg";
 import youtubeIcon from "../assets/icons/youtube.svg";
+import Popup from "../components/Popup";
 function Projects({ projects }) {
   return (
     <div>
@@ -41,19 +42,31 @@ function Projects({ projects }) {
                   alt="read more icon"
                 />
               </a>
-              <a
-                className="project-action"
-                href={project.frontMatter.video}
-                alt={project.frontMatter.video_excerpt}
-                title="Watch video"
-                target="_blank"
-              >
-                <img
-                  className="project-action-icon hover-box-shadow"
-                  src={youtubeIcon}
-                  alt="youtube icon"
-                />
-              </a>
+              {project.frontMatter.video ? (
+                <a
+                  className="project-action"
+                  href={project.frontMatter.video}
+                  alt={project.frontMatter.video_excerpt}
+                  title="Watch video"
+                  target="_blank"
+                >
+                  <img
+                    className="project-action-icon hover-box-shadow"
+                    src={youtubeIcon}
+                    alt="youtube icon"
+                  />
+                </a>
+              ) : (
+                <a className="project-action">
+                  <img
+                    className="project-action-icon hover-box-shadow"
+                    src={youtubeIcon}
+                    alt="youtube icon"
+                    onClick={() => alert(project.frontMatter.video_excerpt)}
+                  ></img>
+                </a>
+              )}
+
             </nav>
           </div>
         ))}
