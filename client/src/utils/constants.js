@@ -2,12 +2,14 @@
 import About from "../pages/About";
 import Projects from "../pages/Projects";
 import Education from "../pages/Education";
+import Experience from "../pages/Experience";
 
 export const headerLinks = [
   // { title: "Home", path: "/", component: Home },
   { title: "About", path: "/", component: About },
   { title: "Projects", path: "/projects", component: Projects },
-  { title: "Education", path: "/Education", component: Education },
+  { title: "Education", path: "/education", component: Education },
+  { title: "Experience", path: "/experience", component: Experience },
 ];
 
 export const projectIds = [

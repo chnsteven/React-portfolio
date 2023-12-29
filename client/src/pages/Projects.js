@@ -1,7 +1,6 @@
 import React from "react";
 import readMoreIcon from "../assets/icons/read-more.svg";
 import youtubeIcon from "../assets/icons/youtube.svg";
-import Popup from "../components/Popup";
 function Projects({ projects }) {
   return (
     <div>

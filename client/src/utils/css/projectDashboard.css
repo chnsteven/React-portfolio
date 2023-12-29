@@ -1,16 +1,16 @@
 .project-card {
     box-sizing: border-box;
-    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
     border-radius: 4px;
     overflow: hidden;
     background: #fff;
-    width: 280px;
-    height: 230px;
+    width: 360px;
+    height: 310px;
     display: inline-block;
     vertical-align: top;
     margin: 36px 0 0 36px;
     position: relative;
-  }
+}
 
 .project-card-header {
     position: relative;
@@ -27,10 +27,10 @@
 }
 
 .project-card-content {
-    font-size:small;
+    font-size: larger;
     position: relative;
     box-sizing: border-box;
-    padding: 12px 18px 0;
+    padding: 15px 18px 0;
     background: #fff
 }
 
@@ -38,10 +38,14 @@
     box-sizing: border-box;
     display: flex;
     align-items: flex-end;
-    position: absolute; /* Position absolute within .project-card */
-    bottom: 0; /* Position at the bottom */
-    left: 0; /* Align to the left */
-    right: 0; /* Align to the right */
+    position: absolute;
+    /* Position absolute within .project-card */
+    bottom: 0;
+    /* Position at the bottom */
+    left: 0;
+    /* Align to the left */
+    right: 0;
+    /* Align to the right */
     margin-top: auto;
     height: 2.5rem
 }
@@ -52,11 +56,11 @@
     flex: 0 0 25%;
     display: inline-block;
     justify-content: center;
-    margin: 0 0 10px;
+    margin: 0 0 15px;
 }
 
 .project-action-icon {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     /* margin: 0 5px 3px 5px; */
-  }
+}

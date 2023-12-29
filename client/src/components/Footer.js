@@ -20,6 +20,7 @@ function Footer() {
             <a
               href="https://www.linkedin.com/in/steven-chen-a62226276/"
               className="footer-link hover-text-shadow"
+              target="_blank"
             >
               <img className="footer-icon" src={linkIcon} alt="link icon" />
             </a>
@@ -30,6 +31,7 @@ function Footer() {
             <a
               href="https://github.com/chnsteven"
               className="footer-link hover-text-shadow"
+              target="_blank"
             >
               <img className="footer-icon" src={linkIcon} alt="link icon" />
             </a>

@@ -6,7 +6,7 @@ const matter = require("gray-matter");
 
 const eduPath = path.join(__dirname, "../education");
 router.get("/", (req, res) => {
-  const filePath = path.join(eduPath, "Education.md");
+  const filePath = path.join(eduPath, "education.md");
   try {
     const fileContent = fs.readFileSync(filePath, "utf8");
     const { data, content } = matter(fileContent);

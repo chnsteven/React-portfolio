@@ -5,9 +5,11 @@
 }
 
 body {
+  background-color: #ECF4D6;
   font-family: monospace;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: lighter;
+  color: #092635;
 }
 
 .container {
@@ -37,7 +39,7 @@ body {
   bottom: 20px;
   right: 20px;
   display: none;
-  background-color: #007bff;
+  background-color: #092635;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -61,7 +63,7 @@ Link {
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 70%;
-  background-color: dodgerblue;
+  background-color: #092635;
   /* font settings */
   font-size: 20px;
   font-weight: bold;
@@ -79,7 +81,7 @@ Link {
 }
 
 #navigation-bar {
-  background-color: dodgerblue;
+  background-color: #1B4242;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -117,7 +119,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: dodgerblue;
+  background-color: #5C8374;
   color: white;
   padding: 10px;
   text-align: center;
@@ -146,8 +148,6 @@ footer {
 .footer-icon {
   width: 20px;
   height: 20px;
-  /* margin-bottom: 3px;
-  margin-right: 5px; */
   margin: 0 5px 3px 5px;
 }
 
@@ -158,19 +158,17 @@ footer {
 .title {
   display: inline-block;
   border-style: double;
-  text-shadow: #fc0 2px 3px;
+  text-shadow: #9EC8B9 2px 3px;
   text-align: center;
   text-transform: capitalize;
   margin-top: 20px;
   padding-left: 5px;
   padding-right: 5px;
-  /* text-orientation:upright; */
-  /* writing-mode: vertical-lr; */
 }
 
 .sub-title {
   font-style: italic;
-  text-shadow: #fc0 2px 3px;
+  text-shadow: #9EC8B9 2px 3px;
   text-align: left;
   text-transform: capitalize;
   padding: 10px;
@@ -195,7 +193,7 @@ strong {
 }
 
 .no-decoration {
-  color: black;
+  color: #5C8374;
   text-decoration: none;
 }
 
@@ -208,6 +206,7 @@ strong {
   height: 20px;
   margin: 2px;
   padding: 2px;
+
 }
 
 .return-to-projects-button {
@@ -217,7 +216,7 @@ strong {
   bottom: 10vh;
   left: 50%;
   transform: translateX(-50%);
-  background-color: dodgerblue;
+  background-color: #092635;
   border-radius: 10px;
   color: white;
   padding: 10px;

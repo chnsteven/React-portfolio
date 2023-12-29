@@ -26,7 +26,7 @@ function Header({ headerLinks }) {
   return (
     <Router>
       <nav className="container-fluid" id="navigation-bar">
-        {headerLinks.map((headerLink, index) => (
+        {headerLinks.map((headerLink) => (
           <Link
             to={headerLink.path}
             className="navigation-bar-link hover-text-shadow"
