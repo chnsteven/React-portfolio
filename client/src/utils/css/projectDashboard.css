@@ -27,11 +27,13 @@
 }
 
 .project-card-content {
-    font-size: larger;
+    font-size: large;
     position: relative;
     box-sizing: border-box;
-    padding: 15px 18px 0;
-    background: #fff
+    padding: 12px 16px 0;
+    display: flex;
+    background: #fff;
+    justify-content: center;
 }
 
 .project-dashboard-action-container {
@@ -39,28 +41,25 @@
     display: flex;
     align-items: flex-end;
     position: absolute;
-    /* Position absolute within .project-card */
     bottom: 0;
-    /* Position at the bottom */
     left: 0;
-    /* Align to the left */
     right: 0;
-    /* Align to the right */
     margin-top: auto;
-    height: 2.5rem
+    height: 2.5rem;
+    justify-content: space-around;
 }
 
 .project-action {
     transition: color .2s;
     box-sizing: border-box;
     flex: 0 0 25%;
-    display: inline-block;
+    display: flex;
+    margin-bottom: 10px;
     justify-content: center;
-    margin: 0 0 15px;
 }
 
 .project-action-icon {
-    width: 30px;
-    height: 30px;
+    width: 27px;
+    height: 27px;
     /* margin: 0 5px 3px 5px; */
 }

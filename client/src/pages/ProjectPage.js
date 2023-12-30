@@ -1,5 +1,7 @@
 import Markdown from "react-markdown";
 import React, { useEffect, useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 const convertMarkdownToHTML = (text) => {
   text = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"); // Bold
   text = text.replace(/\*(.*?)\*/g, "<em>$1</em>"); // Italic
@@ -27,6 +29,8 @@ function ProjectPage({ project }) {
 
   return (
     <div>
+      <Header />
+      <Footer />
       <button className="return-to-projects-button"
         onClick={() => window.location.href = "/projects"} >
         {/* <img

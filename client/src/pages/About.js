@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { aboutContent } from "../utils/constants";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 const convertMarkdownToHTML = (text) => {
   text = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"); // Bold
   text = text.replace(/\*(.*?)\*/g, "<em>$1</em>"); // Italic
@@ -27,6 +29,8 @@ function About() {
 
   return (
     <div>
+      <Header />
+      <Footer />
       <article className="container">
         <section>
           <h1 className="sub-title">About</h1>
@@ -56,7 +60,6 @@ function About() {
         </section>
       </article>
     </div>
-
   );
 }
 

@@ -1,9 +1,13 @@
 import React from "react";
 import readMoreIcon from "../assets/icons/read-more.svg";
 import youtubeIcon from "../assets/icons/youtube.svg";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 function Projects({ projects }) {
   return (
     <div>
+      <Header />
+      <Footer />
       <div className="project-dashboard-box-container">
         {projects.map((project, index) => (
           <div className="project-card hover-box-shadow">

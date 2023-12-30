@@ -3,6 +3,7 @@
     color: #fff;
     padding: 20px;
     text-align: center;
+    margin-top: 1em;
 }
 
 .education-container {
@@ -22,6 +23,7 @@
 
 .certificate-header {
     text-align: center;
+    margin-top: ;
 }
 
 .certificate-header h2 {

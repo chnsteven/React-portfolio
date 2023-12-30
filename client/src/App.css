@@ -231,3 +231,20 @@ strong {
   color: white;
   padding: 10px;
 }
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Define the final state of the element */
+.fade-in.active {
+  opacity: 1;
+}
+
+.home-page-container {
+  background-color: #092635;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
