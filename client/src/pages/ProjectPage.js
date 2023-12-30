@@ -1,14 +1,20 @@
 import Markdown from "react-markdown";
-import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
+
 const convertMarkdownToHTML = (text) => {
   text = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"); // Bold
   text = text.replace(/\*(.*?)\*/g, "<em>$1</em>"); // Italic
   return text;
 };
 function ProjectPage({ project }) {
+  const navigate = useNavigate();
   const [keywords, setKeywords] = useState([]);
+  const handleReturnToProjects = () => {
+    navigate('/projects');
+  };
   useEffect(() => {
     let keywordArray = [];
     // Render each item in the array with dangerouslySetInnerHTML
@@ -32,7 +38,7 @@ function ProjectPage({ project }) {
       <Header />
       <Footer />
       <button className="return-to-projects-button"
-        onClick={() => window.location.href = "/projects"} >
+        onClick={handleReturnToProjects} >
         {/* <img
           className="icon"
           src={arrowLeftIcon}

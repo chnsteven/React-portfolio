@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { headerLinks } from "../utils/constants";
-import { useState, useEffect } from "react";
-import axios from "axios";
+// import { useState, useEffect } from "react";
+// import axios from "axios";
 
 function Header() {
   return (
@@ -18,7 +18,6 @@ function Header() {
 
       ))}
     </nav>
-
   );
 }
 

@@ -2,8 +2,9 @@ import "./App.css";
 import "./utils/css/projectDashboard.css";
 import "./utils/css/education.css";
 import "./utils/css/popup.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { projectIds, headerLinks } from "./utils/constants";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -42,6 +43,15 @@ function App() {
   return (
     <Router>
       <Routes>
+        {projects.map((project) =>
+        (project && (
+          <Route
+            // key={project.frontMatter.title}  // Don't forget to add a unique key
+            path={"/projects/" + project.frontMatter.title}
+            element={<ProjectPage project={project} />}
+          />
+        )
+        ))}
         {headerLinks.map((link, index) => {
           if (link.title === "Projects") {
             return (

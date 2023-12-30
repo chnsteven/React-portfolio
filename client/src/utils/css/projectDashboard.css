@@ -8,8 +8,23 @@
     height: 310px;
     display: inline-block;
     vertical-align: top;
+
     margin: 36px 0 0 36px;
     position: relative;
+
+    /* @media screen and (max-width: 768px) {
+        width: 180px;
+        height: 155px;
+        margin: 10px 0 0 10px;
+        font-size: 10px;
+    } */
+}
+
+.project-dashboard-box-container {
+    display: inline-block;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20vh;
 }
 
 .project-card-header {
