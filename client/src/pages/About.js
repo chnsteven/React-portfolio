@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import ScrollToTopButton from "../components/ScrollToTopButton";
 import { aboutContent } from "../utils/constants";
 const convertMarkdownToHTML = (text) => {
   text = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"); // Bold
@@ -28,29 +27,36 @@ function About() {
 
   return (
     <div>
-      <ScrollToTopButton />
-      <div className="container">
-        <h1 className="title">About</h1>
-        <ul className="left-align">
-          {aboutContent.map((content, index) => (
-            <li key={index}>
-              <p
-                key={index}
-                dangerouslySetInnerHTML={{
-                  __html: convertMarkdownToHTML(content),
-                }}
-              />
-            </li>
-          ))}
-        </ul>
-        <h1 className="title">Skills</h1>
-        <ul className="left-align">
-          {skills.map((skill, index) => (
-            <li key={index}>{skill}</li>
-          ))}
-        </ul>
-      </div>
+      <article className="container">
+        <section>
+          <h1 className="sub-title">About</h1>
+          <ul>
+            {aboutContent.map((content, index) => (
+              <li key={index}>
+                <p
+                  className="left-align"
+                  key={index}
+                  dangerouslySetInnerHTML={{
+                    __html: convertMarkdownToHTML(content),
+                  }}
+                />
+              </li>
+            ))}
+          </ul>
+        </section>
+      </article>
+      <article className="container">
+        <section>
+          <h1 className="sub-title">Skills</h1>
+          <ul className="left-align">
+            {skills.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
+          </ul>
+        </section>
+      </article>
     </div>
+
   );
 }
 

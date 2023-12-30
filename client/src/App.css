@@ -13,9 +13,19 @@ body {
 }
 
 .container {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  align-items: start;
+  justify-items: center;
+  overflow-wrap: break-word;
+  padding: 0 2em;
+}
+
+.container-column {
+  max-width: 80%;
+}
+
+.section {
+  display: inline-block;
 }
 
 .fit-picture {
@@ -141,7 +151,7 @@ footer {
 }
 
 .footer-link {
-  color: azure;
+  color: #0F0F0F;
   text-decoration: none;
 }
 
@@ -156,7 +166,8 @@ footer {
 }
 
 .title {
-  display: inline-block;
+  justify-items: center;
+  display: grid;
   border-style: double;
   text-shadow: #9EC8B9 2px 3px;
   text-align: center;
@@ -169,10 +180,9 @@ footer {
 .sub-title {
   font-style: italic;
   text-shadow: #9EC8B9 2px 3px;
-  text-align: left;
+  text-align: center;
   text-transform: capitalize;
-  padding: 10px;
-  margin-left: 30px;
+  /* margin-left: 30px; */
 }
 
 li {

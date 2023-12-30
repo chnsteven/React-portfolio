@@ -1,6 +1,5 @@
 import Markdown from "react-markdown";
 import React, { useEffect, useState } from "react";
-import arrowLeftIcon from "../assets/icons/arrow-left.svg";
 const convertMarkdownToHTML = (text) => {
   text = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"); // Bold
   text = text.replace(/\*(.*?)\*/g, "<em>$1</em>"); // Italic
@@ -24,7 +23,7 @@ function ProjectPage({ project }) {
       keywordArray.push(keyword.join(", "));
     });
     setKeywords(keywordArray);
-  }, []);
+  }, [project]);
 
   return (
     <div>
@@ -35,53 +34,50 @@ function ProjectPage({ project }) {
           src={arrowLeftIcon}
           alt="arrow left icon" /> */}
         Return to project page </button>
-      <div>
+
+      <article className="container">
         <h1 className="title">
           <Markdown>{project.frontMatter.title}</Markdown>
         </h1>
-      </div>
-      {project.frontMatter.overview && (
-        <div>
-          <h1 className="sub-title">
-            Overview
-          </h1>
-          <ul>
-            <li className="left-align">
-              <Markdown>{project.frontMatter.overview}</Markdown>
-            </li>
-          </ul>
-
-        </div>
-      )}
-      {project.frontMatter.features && (
-        <div>
-          <h1 className="sub-title">
-            Features
-          </h1>
-          <ul className="left-align">
-            {project.frontMatter.features.map((feature, index) => (
-              <li key={index}>
-                <Markdown>{feature}</Markdown>
+        {project.frontMatter.overview && (
+          <section className="container-column">
+            <h1 className="sub-title">
+              Overview
+            </h1>
+            <ul className="left-align">
+              <li>
+                <Markdown>{project.frontMatter.overview}</Markdown>
               </li>
-            ))}
-          </ul>
-        </div>
-      )}
-      {keywords.length > 0 && (
-        <div>
-          <h1 className="sub-title">Keywords</h1>
-          <ul className="left-align">
-            {keywords.map((keyword, index) => (
-              (keyword !== "" && (
-                <li key={index}>{keyword}</li>
-              ))
-            ))}
-          </ul>
-        </div>
-      )}
-
-
-
+            </ul>
+          </section>
+        )}
+        {project.frontMatter.features && (
+          <section className="container-column">
+            <h1 className="sub-title">
+              Features
+            </h1>
+            <ul className="left-align">
+              {project.frontMatter.features.map((feature, index) => (
+                <li key={index}>
+                  <Markdown>{feature}</Markdown>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+        {keywords.length > 0 && (
+          <section className="container-column">
+            <h1 className="sub-title">Keywords</h1>
+            <ul className="left-align">
+              {keywords.map((keyword, index) => (
+                (keyword !== "" && (
+                  <li key={index}>{keyword}</li>
+                ))
+              ))}
+            </ul>
+          </section>
+        )}
+      </article>
     </div>
   );
 }
