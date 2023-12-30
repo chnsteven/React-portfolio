@@ -30,10 +30,10 @@ function ProjectPage({ project }) {
     <div>
       <button className="return-to-projects-button"
         onClick={() => window.location.href = "/projects"} >
-        <img
+        {/* <img
           className="icon"
           src={arrowLeftIcon}
-          alt="arrow left icon" />
+          alt="arrow left icon" /> */}
         Return to project page </button>
       <div>
         <h1 className="title">

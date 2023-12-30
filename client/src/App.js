@@ -1,5 +1,6 @@
 import "./App.css";
 import "./utils/css/projectDashboard.css";
+import "./utils/css/education.css";
 import "./utils/css/popup.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
