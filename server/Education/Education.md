@@ -18,5 +18,5 @@ major_courses:
     "Intelligent Systems",
     "Video Game Programming",
   ]
-cover_image: "../images/cover-ubc.jpeg"
+cover_image: "../cover_imgs/cover-ubc.jpeg"
 ---

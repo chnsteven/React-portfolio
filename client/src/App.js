@@ -1,8 +1,9 @@
-import "./App.css";
+
 import "./utils/css/projectDashboard.css";
 import "./utils/css/education.css";
 import "./utils/css/popup.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { projectIds, headerLinks } from "./utils/constants";
@@ -41,46 +42,49 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <Routes>
-        {projects.map((project) =>
-        (project && (
-          <Route
-            // key={project.frontMatter.title}  // Don't forget to add a unique key
-            path={"/projects/" + project.frontMatter.title}
-            element={<ProjectPage project={project} />}
-          />
-        )
-        ))}
-        {headerLinks.map((link, index) => {
-          if (link.title === "Projects") {
-            return (
-              <Route
-                key={index}
-                path={link.path}
-                element={<link.component projects={projects} />}
-              />
-            );
-          } else if (link.title === "Education") {
-            return (
-              <Route
-                key={index}
-                path={link.path}
-                element={<link.component education={education} />}
-              />
-            );
-          } else {
-            return (
-              <Route
-                key={index}
-                path={link.path}
-                element={<link.component />}
-              />
-            );
-          }
-        })}
-      </Routes>
-    </Router>
+    <div className="body">
+      <Router>
+        <Routes>
+          {projects.map((project) =>
+          (project && (
+            <Route
+              // key={project.frontMatter.title}  // Don't forget to add a unique key
+              path={"/projects/" + project.frontMatter.title}
+              element={<ProjectPage project={project} />}
+            />
+          )
+          ))}
+          {headerLinks.map((link, index) => {
+            if (link.title === "Projects") {
+              return (
+                <Route
+                  key={index}
+                  path={link.path}
+                  element={<link.component projects={projects} />}
+                />
+              );
+            } else if (link.title === "Education") {
+              return (
+                <Route
+                  key={index}
+                  path={link.path}
+                  element={<link.component education={education} />}
+                />
+              );
+            } else {
+              return (
+                <Route
+                  key={index}
+                  path={link.path}
+                  element={<link.component />}
+                />
+              );
+            }
+          })}
+        </Routes>
+      </Router>
+    </div>
+
   );
 }
 
