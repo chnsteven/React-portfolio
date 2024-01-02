@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #ECF4D6;
+  background-color: #9EC8B9;
   font-family: monospace;
   font-size: 16px;
   font-weight: lighter;
@@ -237,7 +237,7 @@ strong {
 
 .fade-in {
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 2.0s ease-in-out;
 }
 
 /* Define the final state of the element */
@@ -251,15 +251,3 @@ strong {
   height: 100vh;
   position: absolute;
 }
-
-/* .Home {
-  transition: opacity 0.5s ease-in-out;
-} */
-
-/* .fade-in {
-  opacity: 1;
-}
-
-.fade-out {
-  opacity: 0;
-} */
