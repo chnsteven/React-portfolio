@@ -16,6 +16,7 @@ button {
   transition: background-color 0.2s ease-in-out;
 }
 
+
 .container {
   display: grid;
   align-items: start;
@@ -71,7 +72,6 @@ Link {
 }
 
 .btn-home {
-  /* button settings */
   width: 200px;
   height: 120px;
   margin-top: 15px;
@@ -84,7 +84,6 @@ Link {
   color: white;
   transition: box-shadow 0.1s ease;
 
-  /* Responsive styles using media queries */
   @media (max-width: 767px) {
     width: 175px;
     height: 80px;
@@ -94,17 +93,30 @@ Link {
   }
 }
 
-#navigation-bar {
-  background-color: #1B4242;
+header {
   display: flex;
+  background-color: #5C8374;
   align-items: center;
-  justify-content: left;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.header-icon {
+  width: 30px;
+  height: 100%;
+  margin: 0 1.5em;
+}
+
+#navigation-bar {
+  display: flex;
+  justify-content: flex-start;
   width: 100%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  position: relative;
-  margin-bottom: 10px;
-  /* height: 5vh; */
+}
+
+#navigation-link {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 .navigation-bar-link {
@@ -144,17 +156,6 @@ footer {
   @media (max-width: 767px) {
     font-size: 12px;
   }
-}
-
-.contact-columns {
-  display: flex;
-  align-items: center;
-}
-
-.contact-column {
-  text-align: left;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 .footer-link {
@@ -218,11 +219,9 @@ strong {
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
-  margin: 2px;
-  padding: 2px;
-
+  width: 30px;
+  height: 100%;
+  margin: 0 1.5em;
 }
 
 .return-to-projects-button {

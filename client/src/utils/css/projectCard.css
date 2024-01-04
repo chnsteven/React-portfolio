@@ -8,16 +8,8 @@
     height: 310px;
     display: inline-block;
     vertical-align: top;
-
     margin: 36px 0 0 36px;
     position: relative;
-
-    /* @media screen and (max-width: 768px) {
-        width: 180px;
-        height: 155px;
-        margin: 10px 0 0 10px;
-        font-size: 10px;
-    } */
 }
 
 .project-dashboard-box-container {
@@ -75,5 +67,4 @@
 .project-action-icon {
     width: 27px;
     height: 27px;
-    /* margin: 0 5px 3px 5px; */
 }

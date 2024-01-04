@@ -1,6 +1,5 @@
 import "./utils/css/projectCard.css";
 import "./utils/css/education.css";
-import "./utils/css/popup.css";
 import "./utils/css/animations.css";
 import "./App.css";
 import React from "react";
