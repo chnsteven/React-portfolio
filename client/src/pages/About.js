@@ -28,7 +28,7 @@ function About() {
   }, []);
 
   return (
-    <div>
+    <div className="fade-in">
       <Header />
       <Footer />
       <article className="container">

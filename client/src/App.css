@@ -1,5 +1,3 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
-
 .App {
   text-align: center;
 }
@@ -240,17 +238,13 @@ strong {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* height: 100vh; */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  animation-name: fadeInBackground;
+  height: 100vh;
   animation-delay: 0s;
   z-index: 0;
-
-
 }
 
 .homepage-content {
@@ -259,43 +253,45 @@ strong {
   align-items: center;
   justify-content: center;
   overflow-wrap: break-word;
-  padding: 40% 10em;
+  padding-top: 50vh;
   position: relative;
   z-index: 1;
-  animation-name: fadeInContent;
-  animation-delay: 1.5s;
+  max-width: 80%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homepage-content-quote {
+  padding-left: 1em;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-left: 5px solid #007bff;
+  font-size: 1.5em;
+  color: #4F6F52;
 }
 
 .homepage-container {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
-
-.fade-in {
-  opacity: 0;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
+.homepage-btn {
+  margin-top: 2em;
+  font-size: 1.5em;
+  background-color: #739072;
+  border-radius: 60%;
+  height: 5em;
+  width: 15em;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
 }
 
-@keyframes fadeInBackground {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+.homepage-btn:hover {
+  background-color: #4F6F52;
 }
 
-@keyframes fadeInContent {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+.text-shadow {
+  text-shadow: #D2E3C8 3px 3px;
 }

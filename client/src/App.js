@@ -2,7 +2,7 @@
 import "./utils/css/projectDashboard.css";
 import "./utils/css/education.css";
 import "./utils/css/popup.css";
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import "./utils/css/animations.css";
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';

@@ -1,32 +1,43 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
   const navigate = useNavigate();
-  const enterPortfolio = () => {
-    navigate("/about");
-  };
+  function triggerFadeOut() {
+    const element = document.querySelector('#fade-out-container');
+    element.classList.add('trigger-fade-out');
+    element.addEventListener('animationend', function () {
+      // alert('Animation is complete!');
+      navigate("/about");
+    }, { once: true });
+  }
   return (
-    <div className="homepage-container">
+    <div
+      className="homepage-container fade-out"
+      id="fade-out-container"
+    >
       <div className="homepage-background fade-in" />
       <article
-        className="homepage-content fade-in">
-        <blockquote>
-          <p>
+        className="homepage-content">
+        <blockquote className="homepage-content-quote text-shadow translate-in-y">
+          <em>
             Hello, I am Steven Chen. As a recent graduate from UBC with a passion for statistics and computer science,
             I bring a fresh perspective for turning ideas into innovative solutions.
             My diverse academic background,
             coupled with hands-on experience from school projects and self-driven initiatives,
             fuels my commitment to excel in the dynamic world of software development.
             Let's build something extraordinary together.
-          </p>
+          </em>
         </blockquote>
-        <button
-          onClick={enterPortfolio}>
-          Enter Portfolio
-        </button>
+        <div className="fade-in">
+          <button className="homepage-btn glow"
+            onClick={triggerFadeOut}>
+            Enter Portfolio
+          </button>
+        </div>
+
       </article>
-    </div>
+    </div >
 
   );
 }
