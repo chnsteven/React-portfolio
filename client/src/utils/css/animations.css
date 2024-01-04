@@ -1,13 +1,13 @@
 .trigger-fade-out {
-    animation-name: fadeOut;
+    animation: 1s ease-out 0s fadeOut;
 }
 
 .fade-in {
-    animation: 1s ease-in-out 0s fadeIn;
+    animation: 1s ease-in 0s fadeIn;
 }
 
 .translate-in-y {
-    animation: 1s ease-out 0s translateIn;
+    animation: 1s ease-in-out 0s translateIn;
 }
 
 .glow {
@@ -16,8 +16,8 @@
 
 #fade-out-container {
     opacity: 1;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+    /* animation-duration: 2s;
+    animation-fill-mode: forwards; */
 }
 
 

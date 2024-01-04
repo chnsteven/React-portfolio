@@ -28,10 +28,10 @@ function About() {
   }, []);
 
   return (
-    <div className="fade-in">
+    <div>
       <Header />
       <Footer />
-      <article className="container">
+      <article className="container fade-in">
         <section>
           <h1 className="sub-title">About</h1>
           <ul>
@@ -49,7 +49,7 @@ function About() {
           </ul>
         </section>
       </article>
-      <article className="container">
+      <article className="container fade-in">
         <section>
           <h1 className="sub-title">Skills</h1>
           <ul className="left-align">

@@ -11,7 +11,7 @@ function Education({ education }) {
     <div>
       <Header />
       <Footer />
-      <div className="education container">
+      <div className="education container fade-in">
         <header className="header">
           <h1>Steven Chen</h1>
           <p>

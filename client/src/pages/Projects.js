@@ -9,7 +9,7 @@ function Projects({ projects }) {
     <div>
       <Header />
       <Footer />
-      <div className="project-dashboard-box-container">
+      <div className="project-dashboard-box-container fade-in">
         {projects.map((project) => (
           <div className="project-card hover-box-shadow">
             <div className="project-card-header">

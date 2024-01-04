@@ -37,7 +37,7 @@ function ProjectPage({ project }) {
     <div>
       <Header />
       <Footer />
-      <button className="return-to-projects-button"
+      <button className="return-to-projects-button fade-in"
         onClick={handleReturnToProjects} >
         {/* <img
           className="icon"
@@ -45,7 +45,7 @@ function ProjectPage({ project }) {
           alt="arrow left icon" /> */}
         Return to project page </button>
 
-      <article className="container">
+      <article className="container fade-in">
         <h1 className="title">
           <Markdown>{project.frontMatter.title}</Markdown>
         </h1>
