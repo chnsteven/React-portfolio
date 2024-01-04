@@ -51,16 +51,22 @@ button {
 
 .scroll-to-top-button {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 7%;
+  right: 5%;
   display: none;
-  background-color: #092635;
+  background-color: #739072;
   color: #fff;
-  border: none;
   border-radius: 4px;
-  padding: 10px;
   font-size: 16px;
   cursor: pointer;
+  width: 2em;
+  height: 2em;
+  border-radius: 10px;
+  font-size: 2em;
+}
+
+.scroll-to-top-button:hover {
+  background-color: #092635;
 }
 
 .scroll-to-top-button.visible {
@@ -156,17 +162,6 @@ footer {
   @media (max-width: 767px) {
     font-size: 12px;
   }
-}
-
-.footer-link {
-  color: #0F0F0F;
-  text-decoration: none;
-}
-
-.footer-icon {
-  width: 20px;
-  height: 20px;
-  margin: 0 5px 3px 5px;
 }
 
 .bold-text {

@@ -5,11 +5,13 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Link } from 'react-router-dom';
 import underConstructionGif from "../assets/underConstruction.gif";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 function Projects({ projects }) {
   return (
     <div>
       <Header />
       <Footer />
+      <ScrollToTopButton />
       <div className="project-dashboard-box-container fade-in">
         <div className="project-card hover-box-shadow">
           <div className="project-card-header">
