@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import portrait from "../assets/portrait.jpg";
 
 function Home() {
   const navigate = useNavigate();
@@ -17,8 +18,8 @@ function Home() {
       id="fade-out-container"
     >
       <div className="homepage-background fade-in" />
-      <article
-        className="homepage-content">
+      <article className="homepage-content">
+        <img className="portrait scale-in" src={portrait} alt="portrait of Steven Chen" />
         <blockquote className="homepage-content-quote text-shadow translate-in-y">
           <em>
             Hello, I am Steven Chen. As a recent graduate from UBC with a passion for statistics and computer science,

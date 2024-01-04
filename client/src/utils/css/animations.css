@@ -16,10 +16,11 @@
 
 #fade-out-container {
     opacity: 1;
-    /* animation-duration: 2s;
-    animation-fill-mode: forwards; */
 }
 
+.scale-in {
+    animation: 1s ease-out 0s scaleIn;
+}
 
 @keyframes fadeIn {
     0% {
@@ -71,5 +72,17 @@
     100% {
         box-shadow: 0 0 10px 5px #D2E3C8;
         /* Return to the subtle glow */
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
     }
 }
