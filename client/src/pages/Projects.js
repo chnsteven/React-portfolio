@@ -4,12 +4,22 @@ import youtubeIcon from "../assets/icons/youtube.svg";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Link } from 'react-router-dom';
+import underConstructionGif from "../assets/underConstruction.gif";
 function Projects({ projects }) {
   return (
     <div>
       <Header />
       <Footer />
       <div className="project-dashboard-box-container fade-in">
+        <div className="project-card hover-box-shadow">
+          <div className="project-card-header">
+            <img
+              className="project-card-image"
+              src={underConstructionGif}
+              alt={"Under Construction"}
+            />
+          </div>
+        </div>
         {projects.map((project) => (
           <div className="project-card hover-box-shadow">
             <div className="project-card-header">
