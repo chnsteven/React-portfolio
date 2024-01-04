@@ -12,7 +12,7 @@ function Header() {
           headerLink.title !== "Home" && (
             <Link
               to={headerLink.path}
-              className="navigation-bar-link hover-text-shadow"
+              className="navigation-bar-link"
             >
               {headerLink.title}
             </Link>)

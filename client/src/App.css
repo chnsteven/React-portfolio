@@ -73,6 +73,10 @@ button {
   display: block;
 }
 
+.copy {
+  cursor: pointer;
+}
+
 Link {
   text-decoration: none;
 }
@@ -130,6 +134,11 @@ header {
   color: white;
   font-weight: bold;
   font-size: 18px;
+  transition: color 0.05s linear;
+}
+
+.navigation-bar-link:hover {
+  color: yellow;
 }
 
 #navigation-bar a {

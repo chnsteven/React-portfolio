@@ -1,9 +1,9 @@
 .trigger-fade-out {
-    animation: 1s ease-out 0s fadeOut;
+    animation: 0.5s ease-out 0s fadeOut;
 }
 
 .fade-in {
-    animation: 1s ease-in 0s fadeIn;
+    animation: 0.5s ease-in 0s fadeIn;
 }
 
 .translate-in-y {
@@ -11,7 +11,7 @@
 }
 
 .glow {
-    animation: 1s infinite 2.5s glow;
+    animation: 1s infinite 1.2s glow;
 }
 
 #fade-out-container {
